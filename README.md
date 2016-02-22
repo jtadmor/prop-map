@@ -21,21 +21,22 @@ const props = {
 }
 
 const propMap = createPropMap(props, ['button','title'])
-
-/*
-{
- $main: { className: 'cool-class', someOtherProp: someValue },
- button: { className: 'cool-button', onClick: coolClickHandler },
- title: { className: 'cool-text', onHover: coolHoverHandler }
-}
-*/
-
 <div {...propMap.$main}>
  { props.title && <h1 {...propMap.title}>So Cool</h1> }
  <button {...propMap.button} />
 </div>
 ```
- 
+
+propMap will look like:
+
+```
+ {
+ $main: { className: 'cool-class', someOtherProp: someValue },
+ button: { className: 'cool-button', onClick: coolClickHandler },
+ title: { className: 'cool-text', onHover: coolHoverHandler }
+}
+```
+
  If you just want the properties for one name:
  
  ```
