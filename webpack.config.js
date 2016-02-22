@@ -2,18 +2,15 @@
 module.exports = {
   entry: './src/PropMap.js',
   output: {
-    path: './build',
+    path: './dist',
     filename: 'PropMap.js'       
   },
   module: {
     loaders: [
       {
         test: /\.js$/,
-        loader: 'babel-loader',
+        loader: 'babel-',
         exclude: /node_modules/,
-        query: {
-          presets: ['es2015', 'stage-0']
-        }
       }
     ]
   },
