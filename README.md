@@ -42,5 +42,5 @@ propMap will look like:
  ```
  import { childrenProps } from 'prop-map'
  
- const buttonProps = childrenProps(props, 'button')
+ const buttonProps = childrenProps('button', props)
  ```
