@@ -1,6 +1,6 @@
 {
   "name": "prop-map",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "lib/PropMap.js",
   "author": "Joel Tadmor <jtadmor@gmail.com>",
   "repository": "https://github.com/jtadmor/prop-map",

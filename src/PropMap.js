@@ -1,7 +1,5 @@
 export const childrenProps = (name, props) => {
-  if (props[name + 'Props']) {
-    return props[name + 'Props']
-  }
+  let o = props[name + 'Props'] || {}
 
   const keys = Object.keys( props )
 
@@ -13,7 +11,7 @@ export const childrenProps = (name, props) => {
       childProps[lowerFirst] = props[key]
     }
     return childProps
-  }, {})
+  }, o)
 }
 
 const createPropAssignmentMap = ( props, arrayOfNames ) => {
@@ -22,14 +20,14 @@ const createPropAssignmentMap = ( props, arrayOfNames ) => {
   const assigner = arrayOfNames.reduce( (propLookup, name) => {
     const clone = [].concat(propKeys)
     let numSpliced = 0
+    let o = {}
 
     const i = clone.indexOf(`${name}Props`)
     
     if ( i > -1 ) {
       propKeys.splice(i, 1)
       numSpliced++
-      propLookup[name] = props[`${name}Props`]
-      return propLookup
+      o = props[`${name}Props`]
     }
 
     const nameProps = clone.reduce( ( obj, key, index ) => {
@@ -46,7 +44,7 @@ const createPropAssignmentMap = ( props, arrayOfNames ) => {
         obj[lowerFirst] = props[key]
       }
       return obj
-    }, {})
+    }, o)
 
     if ( Object.keys(nameProps).length > 0 ) {
       propLookup[name] = nameProps
