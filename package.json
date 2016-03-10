@@ -1,6 +1,6 @@
 {
   "name": "prop-map",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "main": "lib/PropMap.js",
   "author": "Joel Tadmor <jtadmor@gmail.com>",
   "repository": "https://github.com/jtadmor/prop-map",
@@ -24,5 +24,6 @@
   "scripts": {
     "test": "./node_modules/karma/bin/karma start",
     "build": "rm -rf lib && ./node_modules/.bin/babel src --out-dir lib"
-  }
+  },
+  "license": "MIT"
 }
