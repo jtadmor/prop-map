@@ -4,7 +4,9 @@ export const childrenProps = (name, props) => {
   const keys = Object.keys( props )
 
   return keys.reduce( ( childProps, key ) => {
-    if (key.match( new RegExp( `^${name}[A-Z]` ) ) ) {
+    if (key === name + 'Props') {
+      return childProps
+    } else if (key.match( new RegExp( `^${name}[A-Z]` ) ) ) {
       const newKey = key.replace( name, '' )
       if ( !newKey ) { return childProps }
       const lowerFirst = newKey[0].toLowerCase() + newKey.slice(1)
