@@ -2,7 +2,7 @@
 
 Request:
 
-[![Request](http://localhost:3001/workspace/qa0EABebC6IwmXxHt6ge/preview?elements=7FW_DiP4eumcacm2o03P7A&type=embed)](http://localhost:3001/workspace/qa0EABebC6IwmXxHt6ge?elements=7FW_DiP4eumcacm2o03P7A)
+![Request](undefined "Request")
 
 
 
