@@ -2,7 +2,7 @@ bpmn-diagram
 
 title Online Order Fulfillment
 
-Customer {
+Customer [color: black] {
   Need product [type: event]
   Place order [type: activity, icon: shopping-cart]
   Shipment received [type: event, icon: mail]

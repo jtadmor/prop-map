@@ -1,5 +1,6 @@
 sequence-diagram
 
+colorMode bold
 title Request
 
 Client [icon: monitor, color: gray]
