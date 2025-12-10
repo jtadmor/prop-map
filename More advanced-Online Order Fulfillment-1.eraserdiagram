@@ -1,0 +1,37 @@
+bpmn-diagram
+
+title Online Order Fulfillment
+
+Customer [color: black] {
+  Need product [type: event]
+  Place order [type: activity, icon: shopping-cart]
+  Shipment received [type: event, icon: mail]
+  Order completed [type: event]
+}
+
+Online Store {
+  Sales {
+    Verify payment [type: activity, icon: credit-card]
+    Payment approved? [type: gateway, icon: x]
+    Generate pick list [type: activity, icon: list]
+  }
+  Warehouse {
+    Pick items [type: activity, icon: box]
+    Pack & label shipment [type: activity, icon: package]
+    Ship order [type: activity, icon: truck]
+    Shipped [type: event]
+  }
+}
+
+Need product > Place order
+Place order --> Verify payment : Order
+Verify payment > Payment approved?
+Payment approved? > Generate pick list : Yes
+Payment approved? --> Order completed : Payment declined
+Generate pick list --> Pick items : Pick list
+Pick items > Pack & label shipment
+Pack & label shipment > Ship order
+Place order > Shipment received
+Ship order --> Shipment received : Shipment
+Ship order > Shipped
+Shipment received > Order completed
