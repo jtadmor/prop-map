@@ -3,6 +3,7 @@
 
 
 Its very important to understand that this repo has colors as well as arrows.
+Not to mention some pretty in depth things.
 
 ![rects](/.eraser/qa0EABebC6IwmXxHt6ge___qrzg8LLUIVdibQIlzhpLeFMBBin2___---figure---qwzf6WbDVrwQUEs36H_bY---figure---hCTdJQNF_cEH3LfAH_TE_Q.png "rects")
 
