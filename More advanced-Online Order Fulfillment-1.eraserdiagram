@@ -1,5 +1,6 @@
 bpmn-diagram
 
+
 title Online Order Fulfillment
 
 Customer [color: black] {
@@ -35,3 +36,4 @@ Place order > Shipment received
 Ship order --> Shipment received : Shipment
 Ship order > Shipped
 Shipment received > Order completed
+
